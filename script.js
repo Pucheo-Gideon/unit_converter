@@ -32,11 +32,12 @@ function render(){
 
 saveInput.addEventListener("click", ()=> {
     valued = Number(getInputElement.value)
+    getInputElement.value = ""
     localStorage.setItem("inputValue", JSON.stringify(Number(valued)));
     render()
     console.log(getInputElement.value)
    
-    // input.value = ""
+   
     Calculate(valued)
 })
 
